@@ -14,7 +14,7 @@ Bugs and lessons this part:
 - BatchNorm asymmetry: with Linear -> BN -> Tanh, init gain (5/3) and pre-BN bias are irrelevant (BN erases scale, mean-subtraction erases bias -> bias=False); the output layer has no norm after it, so its 0.1 down-scaling still matters.
 - Reading tools: plot log10(loss) (or log-scale axis) because loss improvements are multiplicative; 0.3 on log10 = 2x; perplexity = e^loss (val 2.0275 -> ppl ~7.6, uniform = 27).
 
-Makemore complete: bigram counts -> softmax regression -> MLP -> diagnosed internals -> hand-derived backprop -> hierarchical model. Next checklist item: nanoGPT.
+Also nailed down before closing: BatchNorm1d on 3-D input — a channel/feature is a slot of the output vector (one weight column's recipe); statistics pool over every axis that indexes examples of that slot (batch AND position), so stats shape (1,1,68) over BxL samples, not (1,4,68) over B. Makemore complete: bigram counts -> softmax regression -> MLP -> diagnosed internals -> hand-derived backprop -> hierarchical model. Next: nanoGPT.
 
 ## Hours
 ~4h across two evenings
