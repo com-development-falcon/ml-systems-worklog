@@ -7,3 +7,4 @@
 | 2026-09-21 | 10 | 0.5 | 1 | | 11.5 | makemore part 4 (backprop ninja, calc gap closed) + part 5 WaveNet (val 2.0275); makemore complete |
 | 2026-09-28 | | | | | 0 | Side-hustle week; no study |
 | 2026-10-05 | 7.5 | | 0.5 | | 8 | nanoGPT video + v3 from-memory rewrite (val 1.4806 best, 10.79M params); estimate, not timed |
+| 2026-10-12 to 2026-11-02 | | | | | ~11 | GPT-2 124M: video follow-along (Mac), data prep, perf study + full run on 2xH100 (val 3.1511, HellaSwag 0.2989, 39% MFU), write-up. Estimate 10-12h total over 4 weeks; not split by week or category |
